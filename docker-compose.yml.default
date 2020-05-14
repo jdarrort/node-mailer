@@ -1,4 +1,4 @@
-#docker-compose --project-name=web-bank up -d
+#docker-compose --project-name=rws-mailer up -d
 version: "3"
 services:
   web-bank:
