@@ -3,15 +3,21 @@ version: "3"
 services:
   mailer:
     image: rws-mailer
+    secrets: 
+     - SMTP_USER_PWD
+    rws-mailer
     ports:
      - "8089:8100"
     environment:
      - SMTP_SERVER=my.smtp.server
      - SMTP_USER_LOGIN=my.user
-     - SMTP_USER_PWD=my.user.pwd
+#     - SMTP_USER_PWD=my.user.pwd
      - SMTP_USER_EMAIL=my.user.email
      - DEFAULT_RECIPIENT=def.recipient.email
 networks:
   default:
     external:
       name: rws
+secrets:
+  SMTP_USER_PWD: 
+    external: true

@@ -1,3 +1,5 @@
+
+require('jd-node-env');
 const nodeMailer = require('nodemailer');
 const express = require("express");
 const bodyParser = require('body-parser')
